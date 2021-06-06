@@ -53,9 +53,13 @@ void APawnTank::CalculateRotateInput(float Value)
 void APawnTank::Move()
 {
 	AddActorLocalOffset(MoveDirection, true);
+
+	UE_LOG(LogTemp, Warning, TEXT("Move Direction = %s"), *MoveDirection.ToString());
 }
 
 void APawnTank::Rotate()
 {
 	AddActorLocalRotation(RotationDirection, true);
+
+	UE_LOG(LogTemp, Warning, TEXT("Rotation Direction = %s"), *RotationDirection.Euler().ToString());
 }
