@@ -14,8 +14,7 @@ class TOONTANKS_API APawnTank : public APawnBase
 {
 	GENERATED_BODY()
 
-	public:
-	
+public:
 	// Sets default values for this pawn's properties
 	APawnTank();
 	// Called every frame
@@ -23,13 +22,12 @@ class TOONTANKS_API APawnTank : public APawnBase
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
-	protected:
+protected:
 	// Called when the game starts or when spawned
 	virtual void BeginPlay() override;
 
-	
-	private:
 
+private:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
 	USpringArmComponent* SpringArm = nullptr;
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = "Components", meta = (AllowPrivateAccess = "true"))
@@ -39,7 +37,7 @@ class TOONTANKS_API APawnTank : public APawnBase
 	float MoveSpeed = 100.f;
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Movement", meta = (AllowPrivateAccess = "true"))
 	float RotationSpeed = 100.f;
-	
+
 	FVector MoveDirection;
 	FQuat RotationDirection;
 
@@ -48,6 +46,4 @@ class TOONTANKS_API APawnTank : public APawnBase
 
 	void Move();
 	void Rotate();
-
-	
 };
