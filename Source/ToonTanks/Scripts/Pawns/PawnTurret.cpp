@@ -15,23 +15,34 @@ void APawnTurret::BeginPlay()
 	GetWorldTimerManager().SetTimer(FireRateTimerHandle, this, &APawnTurret::CheckFireCondition, FireRate, true);
 }
 
+void APawnTurret::HandleDestruction()
+{
+	Super::HandleDestruction();
+
+	
+}
+
 // Called every frame
 void APawnTurret::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
+
+	if(!PlayerPawn || ReturnDistanceToPlayer() > FireRange)
+		return;
+
+	FVector PlayerLocation = PlayerPawn->GetActorLocation();
+	RotateTurret(PlayerLocation);
+	
 }
 
 void APawnTurret::CheckFireCondition()
 {
 	if(!PlayerPawn)
-	{
-
 		return;
-	}
 
 	if(ReturnDistanceToPlayer() <= FireRange)
 	{
-
+		Fire();
 		UE_LOG(LogTemp, Warning, TEXT("Fire Condition Success!!!"));
 	}
 
