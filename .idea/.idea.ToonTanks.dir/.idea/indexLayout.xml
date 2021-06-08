@@ -3,6 +3,7 @@
   <component name="UserContentModel">
     <attachedFolders />
     <explicitIncludes>
+      <Path>Source/ToonTanks/Scripts/Actors/ProjectileBase.cpp</Path>
       <Path>Source/ToonTanks/Scripts/Pawns/PawnTurret.cpp</Path>
       <Path>Source/ToonTanks/Scripts/Pawns/PawnTurret.h</Path>
     </explicitIncludes>
