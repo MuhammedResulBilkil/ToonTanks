@@ -44,7 +44,7 @@ void APawnBase::Fire()
 		AProjectileBase* TempProjectile = GetWorld()->SpawnActor<AProjectileBase>(ProjectileClass, SpawnLocation, SpawnRotation);
 		TempProjectile->SetOwner(this);
 
-		UE_LOG(LogTemp, Warning, TEXT("Fire!!!"));
+		//UE_LOG(LogTemp, Warning, TEXT("Fire!!!"));
 	}
 }
 

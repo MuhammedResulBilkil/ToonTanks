@@ -49,4 +49,5 @@ private:
 
 	void Move();
 	void Rotate();
+	void PlayerFire();
 };

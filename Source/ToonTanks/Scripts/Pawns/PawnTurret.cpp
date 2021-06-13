@@ -43,7 +43,7 @@ void APawnTurret::CheckFireCondition()
 	if(ReturnDistanceToPlayer() <= FireRange)
 	{
 		Fire();
-		UE_LOG(LogTemp, Warning, TEXT("Fire Condition Success!!!"));
+		UE_LOG(LogTemp, Warning, TEXT("Enemy Turret Fire!!!"));
 	}
 
 	//UE_LOG(LogTemp, Warning, TEXT("Fire Condition Checked!!!"));
