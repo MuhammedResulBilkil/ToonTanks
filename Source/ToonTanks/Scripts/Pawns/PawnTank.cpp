@@ -43,7 +43,7 @@ void APawnTank::HandleDestruction()
 {
 	Super::HandleDestruction();
 
-	
+	Destroy();
 }
 
 // Called to bind functionality to input

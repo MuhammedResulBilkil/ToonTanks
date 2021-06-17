@@ -19,7 +19,7 @@ void APawnTurret::HandleDestruction()
 {
 	Super::HandleDestruction();
 
-	
+	Destroy();
 }
 
 // Called every frame
