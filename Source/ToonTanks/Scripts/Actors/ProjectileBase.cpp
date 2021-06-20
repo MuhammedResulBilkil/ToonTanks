@@ -38,8 +38,13 @@ void AProjectileBase::OnHit(UPrimitiveComponent* HitComp, AActor* OtherActor, UP
 		return;
 
 	if(OtherActor && OtherActor != this && OtherActor != MyOwner)
+	{
+		//UE_LOG(LogTemp, Warning, TEXT("Other Actor Name = %s"), *OtherActor->GetName());
+		
 		UGameplayStatics::ApplyDamage(OtherActor, Damage, MyOwner->GetInstigatorController(), this, DamageType);
+		UGameplayStatics::SpawnEmitterAtLocation(this, HitParticle, GetActorLocation());
 
-	Destroy();
+		Destroy();
+	}
 }
 
