@@ -43,7 +43,8 @@ private:
 	//Variables
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Projectile Type", meta = (AllowPrivateAccess = "true"))
 	TSubclassOf<AProjectileBase> ProjectileClass;
-
 	UPROPERTY(EditAnywhere, Category = "Effects")
 	UParticleSystem* DeathParticle = nullptr;
+	UPROPERTY(EditAnywhere, Category="Effects")
+	USoundBase* DeathSound = nullptr;
 };
